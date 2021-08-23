@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Tama Moors | Tech Academy Student</title>
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    </head>
+    <body>
+
+        <!--NAVBAR-->
+        <div class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="GitHub">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!--Breaks to add space-->
+        <br>
+        <br>
+
+        <!--BACKGROUND VIDEO-->
+        <div id="home">
+            <video autoplay muted loop id="typing_video">
+                <source src="images/videos/typing_video.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not suppport HTML5 video.
+            </video>
+        </div>
+        
+        <!--VIDEO TEXT-->
+        <div class="video-text">
+            <h1 class="white-text">WELCOME!</h1>
+            <strong>
+                <p class="center">
+                    <q>Software is like entropy:
+                        <br>It is difficult to grasp, weighs nothing, and obeys the Second Law of Thermodynamics;
+                        <br>i.e., it always increases.
+                    </q>
+                    <br> -Norman Augustine
+                    <br>
+                    <br> My name is Tama Moors. This is my portfolio website. Here, I will tell you about my background and experience.
+                    <br>
+                    <br> Thank you for stopping by and enjoy!
+                </p>
+            </strong>
+        </div>
+
+        <!--ABOUT-->
+        <div class="row" id="about">
+            <!--LEFT COLUMN-->
+            <div class="column-2">
+                <img src="images/typing_photo.jpg" alt="Computer">
+            </div>
+            <!--RIGHT COLUMN-->
+            <div class="column-1">
+                <h1>About</h1>
+                <p>
+                    I am an aspiring future developer. I have always been interested in computers, as they have had an enormous impact on my life, as well as the lives of everyone on the planet. Learning the basics of a subject that I have always thought to be too complex to understand has been fulfilling so far and I can't wait to apply this knowledge in the real world.
+                    <br>
+                    <br>
+                    This interest has pushed me to enroll as a student at <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Software Developer Bootcamp. Here I plan to study in the fundamental programming languages such as:
+                    <br>HTML, CSS, JavaScript, SQL, C# and more.
+                </p>
+            </div>
+        </div>
+
+        <!--GITHUB-->
+        <div class="row" id="github">
+            <!--LEFT COLUMN-->
+            <div class="column-1">
+                <h1>GitHub</h1>
+                <p style="text-align: center;">
+                    You can view my coding projects on my Github profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/tamam808" target="_blank">Tama Moors</a></p>
+                </p>
+            </div>
+            <!--RIGHT COLUMN-->
+            <div class="column-2">
+                <a href="https://github.com/tamam808" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--CONTACT-->
+        <div class="row" id="contact">
+            <!--CONTACT IMAGE-->
+            <div class="column-2 column-tall">
+                <img src="images/greeting.jpg" alt="Hello there!">
+            </div>
+            <!--CONTACT FORM-->
+            <div class="column-1 column-tall">
+                <h1>Contact</h1>
+                <form action="" method="POST">
+                    <label>Name:</label>
+                        <input type="text" placeholder="Enter your name here please">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Enter your email here please">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Write your message here please">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!--FOOTER-->
+        <footer>
+            <p>
+                <p class="center">&copy; Tama Moors | 2021</p>
+                <br>
+            </p>
+        </footer>
+    </body>
+</html>
