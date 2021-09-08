@@ -6,19 +6,16 @@
         <title>Tama Moors | Tech Academy Student</title>
         <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     </head>
-    <body>
+    <body class="background">
 
         <!--NAVBAR-->
         <div class="navbar">
             <a class="active" href="#home">Home</a>
+            <a href="#slideshow">Slideshow</a>
             <a href="#about">About</a>
-            <a href="GitHub">GitHub</a>
-            <a href="#contact">Contact</a>
+            <a href="#github">GitHub</a>
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
         </div>
-
-        <!--Breaks to add space-->
-        <br>
-        <br>
 
         <!--BACKGROUND VIDEO-->
         <div id="home">
@@ -47,16 +44,54 @@
             </strong>
         </div>
 
+        <div id="slideshow">
+            <div id="slideshow_background">
+                <div id="slideshow_container">
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos">
+                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="images/Python.png" alt="Python logo">
+                        <div class="text">the popular programming language Python,</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="images/C_Sharp_and_Dot_NET.png" alt="C# logo">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="images/SQL_and_Database.jpg" alt="SQL logo">
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="images/Coding_1.jpg">
+                        <div class="text"><a class="white-text" onclick="openForm()" href="#contact">Contact me now!</a></div>
+                    </div>
+                    <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+            
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+        </div>
+
         <!--ABOUT-->
         <div class="row" id="about">
             <!--LEFT COLUMN-->
             <div class="column-2">
-                <img src="images/typing_photo.jpg" alt="Computer">
+                <img src="images/typing_photo.jpg" alt="Computer" class="scaleimg">
             </div>
             <!--RIGHT COLUMN-->
             <div class="column-1">
                 <h1>About</h1>
-                <p>
+                <p style="font-size: 1.1vw;">
                     I am an aspiring future developer. I have always been interested in computers, as they have had an enormous impact on my life, as well as the lives of everyone on the planet. Learning the basics of a subject that I have always thought to be too complex to understand has been fulfilling so far and I can't wait to apply this knowledge in the real world.
                     <br>
                     <br>
@@ -79,30 +114,30 @@
             </div>
             <!--RIGHT COLUMN-->
             <div class="column-2">
-                <a href="https://github.com/tamam808" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+                <a href="https://github.com/tamam808" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo" class="scaleimg"></a>
             </div>
         </div>
 
         <!--CONTACT-->
-        <div class="row" id="contact">
-            <!--CONTACT IMAGE-->
-            <div class="column-2 column-tall">
-                <img src="images/greeting.jpg" alt="Hello there!">
+        <div id="contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                 <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                     <h1>Contact</h1>
+                     <label for="name"><b>Name</b></label>
+                       <input type="text" placeholder="Type your name here" name="name" required>
+                     <label for="phone"><b>Phone</b></label>
+                       <input type="text" placeholder="Type your phone number here" name="phone">
+                     <label for="email"><b>Email</b></label>		
+                       <input type="text" placeholder="Type your email address here" name="email" required>
+                     <label for="message"><b>Message</b></label>
+                       <input type="text" placeholder="Type your message here" name="message">
+          
+                     <button type="submit" class="btn">SUBMIT</button>
+                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                 </form>
             </div>
-            <!--CONTACT FORM-->
-            <div class="column-1 column-tall">
-                <h1>Contact</h1>
-                <form action="" method="POST">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Enter your name here please">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Enter your email here please">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Write your message here please">
-                        <input type="submit" value="SUBMIT">
-                </form>
-            </div>
-        </div>
+         </div>
 
         <!--FOOTER-->
         <footer>
@@ -111,5 +146,6 @@
                 <br>
             </p>
         </footer>
+        <script src="JS/sample_portfolio.js"></script>
     </body>
 </html>
