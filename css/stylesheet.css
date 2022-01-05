@@ -400,7 +400,7 @@ button:hover, .form-container .btn:hover {
 }
 
 .row {
-    display: flex-box;
+    display: inline-block;
 }
 
 .col {
