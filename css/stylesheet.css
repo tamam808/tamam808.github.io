@@ -398,3 +398,11 @@ button:hover, .form-container .btn:hover {
 #bio {
     padding-bottom: 10px;
 }
+
+.row {
+    display: flex-box;
+}
+
+.col {
+    width: 30%;
+}
